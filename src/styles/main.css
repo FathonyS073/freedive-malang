@@ -220,3 +220,134 @@ button, a { -webkit-tap-highlight-color: transparent; }
 }
 
 
+/* =====================================
+   C.9 - CLOSING CTA
+===================================== */
+
+.closing-cta-background {
+  background-color: #063653;
+
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(1, 31, 57, 0.80) 0%,
+      rgba(2, 55, 91, 0.60) 45%,
+      rgba(1, 27, 53, 0.78) 100%
+    ),
+    linear-gradient(
+      0deg,
+      rgba(0, 20, 40, 0.30),
+      rgba(0, 65, 110, 0.15)
+    ),
+    url("/images/cta.webp");
+
+  background-position:
+    center,
+    center,
+    center 60%;
+
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* Mobile background positioning */
+@media (max-width: 767px) {
+  .closing-cta-background {
+    background-position:
+      center,
+      center,
+      center;
+
+    background-image:
+      linear-gradient(
+        180deg,
+        rgba(1, 27, 50, 0.85) 0%,
+        rgba(3, 49, 82, 0.75) 50%,
+        rgba(1, 25, 48, 0.88) 100%
+      ),
+      url("/images/cta.webp");
+  }
+}
+
+
+/* =====================================
+   C.10 - FOOTER
+===================================== */
+
+/* Recolor original FDM logo for dark footer */
+.footer-logo {
+  filter:
+    brightness(0)
+    saturate(100%)
+    invert(72%)
+    sepia(68%)
+    saturate(1910%)
+    hue-rotate(158deg)
+    brightness(101%)
+    contrast(104%);
+}
+
+/* Footer link hover */
+.footer-link {
+  position: relative;
+  display: inline-block;
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  .footer-link {
+    transition: none;
+  }
+}
+
+
+/* =====================================
+   C.11 - RESPONSIVE OPTIMIZATION
+===================================== */
+
+/* Prevent sticky navbar from covering
+   anchor targets during navigation */
+html {
+  scroll-padding-top: 96px;
+}
+
+/* Keep image subject well positioned
+   on different screen widths */
+@media (min-width: 640px) and (max-width: 1279px) {
+  .hero-image {
+    object-position: 58% center;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 359px) {
+  .hero-image {
+    object-position: 56% center;
+  }
+}
+
+/* Accessibility: Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  #our-identity article,
+  #training-development article,
+  #weekly-training article,
+  #gallery-preview img,
+  #join-community a {
+    transition: none !important;
+  }
+
+  #our-identity article:hover,
+  #training-development article:hover,
+  #weekly-training article:hover,
+  #gallery-preview .group:hover img,
+  #join-community a:hover {
+    transform: none !important;
+  }
+}
+
+
+
