@@ -351,3 +351,356 @@ html {
 
 
 
+/* =====================================
+   C.12 - ABOUT US PAGE
+===================================== */
+
+/* =====================================
+   ABOUT HERO
+===================================== */
+
+.about-hero-bg {
+  background-color: #062b48;
+
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(1, 20, 38, 0.94) 0%,
+      rgba(1, 29, 51, 0.75) 45%,
+      rgba(2, 42, 72, 0.28) 100%
+    ),
+    url("/images/hero-freedive.jpg");
+
+  background-size: cover;
+  background-position: center 45%;
+  background-repeat: no-repeat;
+}
+
+/* =====================================
+   WHO WE ARE
+===================================== */
+
+.about-story-image {
+  object-position: 60% center;
+}
+
+/* =====================================
+   WHAT DEFINES FDM - VALUE CARDS
+===================================== */
+
+.about-value-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  padding: 32px;
+
+  background: #ffffff;
+  border: 1px solid #e7f0f7;
+  border-radius: 20px;
+
+  box-shadow: 0 8px 30px rgba(6, 43, 72, 0.055);
+
+  transition:
+    transform 300ms ease,
+    box-shadow 300ms ease;
+}
+
+.about-value-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 40px rgba(6, 43, 72, 0.11);
+}
+
+.about-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 62px;
+  height: 62px;
+  margin-bottom: 24px;
+
+  color: #07579b;
+  background: #ddf3fc;
+  border-radius: 50%;
+}
+
+.about-icon svg {
+  width: 30px;
+  height: 30px;
+
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.about-value-title {
+  color: #122840;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.45;
+}
+
+.about-value-text {
+  margin-top: 15px;
+
+  color: #64748b;
+  font-size: 14px;
+  line-height: 1.85;
+}
+
+/* =====================================
+   FOUR FUNDAMENTAL PILLARS
+===================================== */
+
+.about-pillar-card {
+  position: relative;
+  overflow: hidden;
+
+  min-height: 320px;
+  padding: 34px;
+
+  background: #f8fbfe;
+  border: 1px solid #e1eef7;
+  border-radius: 22px;
+
+  box-shadow: 0 6px 25px rgba(6, 43, 72, 0.04);
+
+  transition:
+    transform 300ms ease,
+    box-shadow 300ms ease;
+}
+
+.about-pillar-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 15px 35px rgba(6, 43, 72, 0.10);
+}
+
+.about-pillar-number {
+  position: absolute;
+  top: 5px;
+  right: 20px;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 100px;
+  font-weight: 800;
+  letter-spacing: -0.08em;
+  line-height: 1;
+
+  color: #e8f2f9;
+  pointer-events: none;
+  user-select: none;
+}
+
+.about-pillar-label {
+  display: inline-block;
+  margin-bottom: 12px;
+
+  color: #0876c6;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+}
+
+.about-pillar-title {
+  max-width: 400px;
+
+  color: #122840;
+  font-family: "Poppins", sans-serif;
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.about-pillar-subtitle {
+  margin-top: 8px;
+
+  color: #07579b;
+  font-size: 13px;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.about-pillar-description {
+  position: relative;
+  z-index: 1;
+
+  margin-top: 18px;
+
+  color: #64748b;
+  font-size: 14px;
+  line-height: 1.85;
+}
+
+/* =====================================
+   ORGANIZATION STRUCTURE
+===================================== */
+
+.organization-role-card {
+  display: flex;
+  min-height: 120px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding: 24px;
+  text-align: center;
+
+  background: #ffffff;
+  border: 1px solid #d7e9f5;
+  border-radius: 20px;
+
+  box-shadow: 0 6px 24px rgba(6, 43, 72, 0.045);
+}
+
+.organization-role-label {
+  margin-bottom: 10px;
+
+  color: #0876c6;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+}
+
+.organization-role-title {
+  color: #122840;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.organization-division {
+  display: flex;
+  min-height: 145px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding: 24px;
+  text-align: center;
+
+  background: #ffffff;
+  border: 1px solid #cae3f3;
+  border-radius: 18px;
+
+  box-shadow: 0 8px 25px rgba(6, 43, 72, 0.05);
+
+  transition:
+    transform 300ms ease,
+    border-color 300ms ease;
+}
+
+.organization-division:hover {
+  transform: translateY(-4px);
+  border-color: #55bceb;
+}
+
+.organization-division-number {
+  margin-bottom: 12px;
+
+  color: #0876c6;
+  font-family: "Poppins", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.organization-division h3 {
+  color: #122840;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+/* =====================================
+   ABOUT CLOSING CTA
+===================================== */
+
+.about-cta-bg {
+  background-color: #062b48;
+
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(1, 22, 42, 0.86),
+      rgba(2, 49, 84, 0.74),
+      rgba(1, 22, 42, 0.86)
+    ),
+    url("/images/hero-freedive.jpg");
+
+  background-size: cover;
+  background-position: center 70%;
+  background-repeat: no-repeat;
+}
+
+/* =====================================
+   RESPONSIVE
+===================================== */
+
+@media (max-width: 767px) {
+  .about-hero-bg {
+    background-image:
+      linear-gradient(
+        180deg,
+        rgba(1, 22, 42, 0.88),
+        rgba(1, 29, 51, 0.72),
+        rgba(1, 22, 42, 0.88)
+      ),
+      url("/images/hero-freedive.jpg");
+
+    background-position: 58% center;
+  }
+
+  .about-value-card {
+    padding: 26px;
+  }
+
+  .about-pillar-card {
+    min-height: auto;
+    padding: 28px;
+  }
+
+  .about-pillar-number {
+    top: 12px;
+    right: 16px;
+    font-size: 75px;
+  }
+
+  .about-pillar-title {
+    font-size: 19px;
+  }
+
+  .organization-role-card {
+    min-height: 105px;
+  }
+
+  .organization-division {
+    min-height: 120px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .about-value-card,
+  .about-pillar-card,
+  .organization-division {
+    transition: none;
+  }
+
+  .about-value-card:hover,
+  .about-pillar-card:hover,
+  .organization-division:hover {
+    transform: none;
+  }
+}
+
+
+
+
