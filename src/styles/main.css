@@ -59,3 +59,34 @@ button, a { -webkit-tap-highlight-color: transparent; }
       );
   }
 }
+
+/* =====================================
+   C.5 - FOUR FUNDAMENTAL PILLARS
+===================================== */
+
+.pillars-background {
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(1, 26, 48, 0.88) 0%,
+      rgba(2, 39, 70, 0.75) 48%,
+      rgba(1, 28, 53, 0.82) 100%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(2, 30, 54, 0.20) 0%,
+      rgba(1, 20, 38, 0.50) 100%
+    ),
+    url("/images/pillars-underwater.png");
+
+  background-size: cover;
+  background-position: center, center, center 55%;
+  background-repeat: no-repeat;
+}
+
+/* Tablet & Mobile */
+@media (max-width: 1023px) {
+  .pillars-background {
+    background-position: center, center, 55% center;
+  }
+}
