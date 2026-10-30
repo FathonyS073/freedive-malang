@@ -1,17 +1,194 @@
 <!doctype html>
 <html lang="id">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#ffffff" />
-    <meta name="description" content="Malang Freediving Community (FDM), komunitas freediving di Malang sejak 2013. Safety first, belajar dan berkembang bersama." />
-    <title>Malang Freedive — Home</title>
-  </head>
-  <body class="font-sans text-ink antialiased">
-    <div id="site-header" class="sticky top-0 z-50"></div>
-    <main id="main-content" class="min-h-[calc(100vh-76px)]">
-      <!-- Tahap selanjutnya: implementasi Hero Section sesuai desain referensi. -->
-    </main>
-    <script type="module" src="/src/js/main.js"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#ffffff" />
+  <meta name="description"
+    content="Malang Freediving Community (FDM), komunitas freediving di Malang sejak 2013. Safety first, belajar dan berkembang bersama." />
+  <title>Malang Freedive — Home</title>
+</head>
+
+<body class="font-sans text-ink antialiased">
+  <div id="site-header" class="sticky top-0 z-50"></div>
+
+  <!-- ================= MAIN CONTENT ================= -->
+  <main id="main-content">
+
+    <!-- ================= HERO SECTION ================= -->
+    <section id="hero" aria-labelledby="hero-title"
+      class="relative isolate min-h-[720px] overflow-hidden bg-deep-ocean text-white lg:flex lg:min-h-[650px] lg:items-center">
+
+      <!-- Background Image -->
+      <img src="/images/hero-freedive.png" alt="" fetchpriority="high" decoding="async"
+        class="hero-image absolute inset-0 z-0 h-full w-full object-cover" />
+
+      <!-- Dark Gradient Overlay -->
+      <div class="hero-overlay pointer-events-none absolute inset-0 z-10" aria-hidden="true"></div>
+
+      <!-- Hero Content Container -->
+      <div
+        class="relative z-20 mx-auto grid w-full max-w-[1280px] grid-cols-1 items-center gap-14 px-6 pb-36 pt-24 sm:px-8 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.65fr)_minmax(240px,0.7fr)] lg:gap-6 lg:px-12 lg:pb-36 lg:pt-32">
+
+        <!-- LEFT : Hero Text -->
+        <div class="max-w-[570px]">
+
+          <!-- Eyebrow -->
+          <p class="mb-5 text-[10px] font-semibold uppercase tracking-[0.22em] text-slate-100 sm:text-xs">
+            Malang Freediving Community
+            <span class="mx-2 text-aqua">•</span>
+            Est. 2013
+          </p>
+
+          <!-- Main Headline -->
+          <h1 id="hero-title"
+            class="font-heading text-[clamp(3.1rem,6vw,5.3rem)] font-bold leading-[1.03] tracking-[-0.055em]">
+            Dive Deeper
+            <span class="block text-aqua">
+              Grow Better
+            </span>
+            <span class="block text-aqua">
+              Together
+            </span>
+          </h1>
+
+          <!-- Hero Description -->
+          <p class="mt-6 max-w-[480px] text-sm leading-[1.85] text-slate-100 sm:text-base lg:text-[15px]">
+            Komunitas freediving di Malang yang menjadi ruang
+            untuk belajar, berlatih, berkembang, dan membangun
+            budaya keselamatan serta kepedulian terhadap laut.
+          </p>
+
+          <!-- Hero Buttons -->
+          <div class="mt-8 flex flex-wrap items-center gap-3">
+
+            <!-- Primary Button -->
+            <a href="/kegiatan/"
+              class="group inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-gradient-to-r from-[#0BBBF0] to-[#0675D4] px-7 py-3 text-sm font-semibold text-white shadow-[0_10px_28px_rgba(0,90,160,0.3)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_14px_32px_rgba(0,90,160,0.4)] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white">
+              Lihat Kegiatan
+
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"
+                class="transition-transform duration-300 group-hover:translate-x-1">
+                <path d="M5 12h14" />
+                <path d="m12 5 7 7-7 7" />
+              </svg>
+            </a>
+
+            <!-- Secondary Button -->
+            <a href="/tentang/"
+              class="inline-flex min-h-12 items-center justify-center rounded-full border border-white/70 bg-white/5 px-7 py-3 text-sm font-semibold text-white backdrop-blur-sm transition-all duration-300 hover:border-white hover:bg-white/15 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white">
+              Tentang FDM
+            </a>
+
+          </div>
+        </div>
+        <!-- END LEFT -->
+
+        <!-- CENTER : Keep the Freediver Visible -->
+        <div class="hidden lg:block" aria-hidden="true"></div>
+
+        <!-- RIGHT : Community Highlights -->
+        <div class="grid grid-cols-1 gap-7 sm:grid-cols-3 sm:gap-5 lg:grid-cols-1 lg:gap-9">
+
+          <!-- Highlight 1 -->
+          <div class="flex items-center gap-4">
+
+            <div
+              class="flex h-[54px] w-[54px] shrink-0 items-center justify-center rounded-full border border-white/40 bg-white/10 backdrop-blur-sm">
+              <!-- Calendar Icon -->
+              <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"
+                aria-hidden="true">
+                <rect x="3" y="5" width="18" height="16" rx="2" />
+                <path d="M16 3v4M8 3v4M3 10h18" />
+                <path d="M8 14h3M8 17h3M15 14h1" />
+              </svg>
+            </div>
+
+            <div>
+              <h2 class="text-[15px] font-bold leading-6">
+                Sejak 2013
+              </h2>
+              <p class="text-xs leading-5 text-slate-200">
+                Bertumbuh bersama
+              </p>
+            </div>
+          </div>
+
+          <!-- Highlight 2 -->
+          <div class="flex items-center gap-4">
+
+            <div
+              class="flex h-[54px] w-[54px] shrink-0 items-center justify-center rounded-full border border-white/40 bg-white/10 backdrop-blur-sm">
+              <!-- Shield Icon -->
+              <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"
+                aria-hidden="true">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z" />
+                <path d="m9 12 2 2 4-4" />
+              </svg>
+            </div>
+
+            <div>
+              <h2 class="text-[15px] font-bold leading-6">
+                Safety First
+              </h2>
+              <p class="text-xs leading-5 text-slate-200">
+                Prioritas utama kami
+              </p>
+            </div>
+          </div>
+
+          <!-- Highlight 3 -->
+          <div class="flex items-center gap-4">
+
+            <div
+              class="flex h-[54px] w-[54px] shrink-0 items-center justify-center rounded-full border border-white/40 bg-white/10 backdrop-blur-sm">
+              <!-- Community Icon -->
+              <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"
+                aria-hidden="true">
+                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                <circle cx="9" cy="7" r="4" />
+                <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+                <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+              </svg>
+            </div>
+
+            <div>
+              <h2 class="text-[15px] font-bold leading-6">
+                Latihan Setiap Sabtu
+              </h2>
+              <p class="text-xs leading-5 text-slate-200">
+                Bersama komunitas
+              </p>
+            </div>
+          </div>
+
+        </div>
+        <!-- END RIGHT -->
+
+      </div>
+      <!-- END HERO CONTENT -->
+
+      <!-- Bottom White Wave -->
+      <div class="pointer-events-none absolute inset-x-0 bottom-[-1px] z-30 h-[55px] sm:h-[75px] lg:h-[100px]"
+        aria-hidden="true">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 100" preserveAspectRatio="none" class="h-full w-full">
+          <path d="M0 60 C165 35 250 51 395 66 C565 90 710 91 870 59 C1050 23 1210 20 1440 35 L1440 100 L0 100 Z"
+            fill="#FFFFFF" />
+        </svg>
+      </div>
+
+    </section>
+    <!-- =============== END HERO SECTION =============== -->
+
+  </main>
+  <!-- ================= END MAIN CONTENT ================= -->
+
+  <script type="module" src="/src/js/main.js"></script>
+</body>
+
 </html>

@@ -13,3 +13,49 @@
 html { scroll-behavior: smooth; }
 body { margin: 0; min-width: 320px; background: #fff; }
 button, a { -webkit-tap-highlight-color: transparent; }
+
+
+
+/* =====================================
+   HERO SECTION
+===================================== */
+
+/* Background image positioning */
+.hero-image {
+  object-position: 55% center;
+}
+
+/* Desktop dark gradient overlay */
+.hero-overlay {
+  background:
+    linear-gradient(
+      90deg,
+      rgba(1, 20, 38, 0.92) 0%,
+      rgba(2, 31, 52, 0.75) 27%,
+      rgba(2, 36, 58, 0.16) 53%,
+      rgba(2, 30, 50, 0.58) 78%,
+      rgba(1, 18, 34, 0.82) 100%
+    ),
+    linear-gradient(
+      0deg,
+      rgba(0, 22, 39, 0.55) 0%,
+      transparent 50%
+    );
+}
+
+/* Tablet and mobile */
+@media (max-width: 1023px) {
+  .hero-image {
+    object-position: 54% center;
+  }
+
+  .hero-overlay {
+    background:
+      linear-gradient(
+        180deg,
+        rgba(1, 18, 35, 0.84) 0%,
+        rgba(2, 34, 59, 0.72) 45%,
+        rgba(1, 24, 43, 0.9) 100%
+      );
+  }
+}
