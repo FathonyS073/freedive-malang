@@ -141,3 +141,82 @@ button, a { -webkit-tap-highlight-color: transparent; }
     url("/images/training/safety-training.jpg");
 }
 
+
+/* =====================================
+   C.7 - WEEKLY TRAINING SCHEDULE
+===================================== */
+
+/* Shared location images */
+.location-photo {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Kolam Renang Dieng */
+.location-photo--dieng {
+  background-color: #83bfd9;
+
+  background-image:
+    linear-gradient(
+      145deg,
+      rgba(5, 123, 180, 0.20),
+      rgba(1, 47, 85, 0.30)
+    ),
+    url("/images/locations/dieng.jpeg");
+}
+
+/* Universitas Ma Chung */
+.location-photo--ma-chung {
+  background-color: #9bc7d7;
+
+  background-image:
+    linear-gradient(
+      145deg,
+      rgba(15, 116, 168, 0.15),
+      rgba(2, 40, 76, 0.30)
+    ),
+    url("/images/locations/machung.jpg");
+}
+
+/* Kolam Kostrad Singosari */
+.location-photo--kostrad {
+  background-color: #6faac7;
+
+  background-image:
+    linear-gradient(
+      145deg,
+      rgba(5, 113, 173, 0.15),
+      rgba(2, 40, 74, 0.30)
+    ),
+    url("/images/locations/kostrad.jpeg");
+}
+
+
+/* =====================================
+   C.8 - GALLERY PREVIEW
+===================================== */
+
+.gallery-photo {
+  display: block;
+  object-fit: cover;
+}
+
+/* Temporary image crop positions */
+.gallery-photo--1 {
+  object-position: 25% center;
+}
+
+.gallery-photo--2 {
+  object-position: 45% center;
+}
+
+.gallery-photo--3 {
+  object-position: 65% center;
+}
+
+.gallery-photo--4 {
+  object-position: 85% center;
+}
+
+
