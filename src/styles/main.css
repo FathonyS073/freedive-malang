@@ -369,7 +369,7 @@ html {
       rgba(1, 29, 51, 0.75) 45%,
       rgba(2, 42, 72, 0.28) 100%
     ),
-    url("/images/hero-freedive.jpg");
+    url("/images/hero-about.png");
 
   background-size: cover;
   background-position: center 45%;
@@ -634,7 +634,7 @@ html {
       rgba(2, 49, 84, 0.74),
       rgba(1, 22, 42, 0.86)
     ),
-    url("/images/hero-freedive.jpg");
+    url("/images/cta.webp");
 
   background-size: cover;
   background-position: center 70%;
