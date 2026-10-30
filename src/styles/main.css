@@ -90,3 +90,54 @@ button, a { -webkit-tap-highlight-color: transparent; }
     background-position: center, center, 55% center;
   }
 }
+
+/* =====================================
+   C.6 - TRAINING & DEVELOPMENT
+===================================== */
+
+/* Shared training image styles */
+.training-photo {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Pool Training */
+.training-photo--pool {
+  background-color: #087da9;
+
+  background-image:
+    linear-gradient(
+      180deg,
+      rgba(4, 89, 134, 0.05),
+      rgba(2, 35, 67, 0.25)
+    ),
+    url("/images/training/pool-training.jpg");
+}
+
+/* Open Water Training */
+.training-photo--open-water {
+  background-color: #05658e;
+
+  background-image:
+    linear-gradient(
+      180deg,
+      rgba(0, 95, 145, 0.05),
+      rgba(1, 32, 64, 0.30)
+    ),
+    url("/images/training/open-water.jpg");
+}
+
+/* Safety Development */
+.training-photo--safety {
+  background-color: #064d78;
+
+  background-image:
+    linear-gradient(
+      180deg,
+      rgba(0, 70, 115, 0.08),
+      rgba(1, 27, 58, 0.35)
+    ),
+    url("/images/training/safety-training.jpg");
+}
+
