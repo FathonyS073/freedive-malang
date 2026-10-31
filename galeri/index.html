@@ -1,17 +1,248 @@
 <!doctype html>
 <html lang="id">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Gallery — Malang Freedive</title>
-  </head>
-  <body class="font-sans text-ink antialiased">
-    <div id="site-header" class="sticky top-0 z-50"></div>
-    <main id="main-content" class="mx-auto min-h-[calc(100vh-76px)] max-w-[1200px] px-6 py-20">
-      <p class="mb-3 text-sm font-bold uppercase tracking-[0.18em] text-ocean">Malang Freediving Community</p>
-      <h1 class="text-4xl font-bold lg:text-5xl">Gallery</h1>
-      <p class="mt-5 text-slate-600">Halaman ini akan kita kembangkan setelah homepage selesai.</p>
-    </main>
-    <script type="module" src="/src/js/main.js"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gallery — Malang Freedive</title>
+</head>
+
+<body class="font-sans text-ink antialiased">
+  <div id="site-header" class="sticky top-0 z-50"></div>
+
+  <!-- =====================================
+     GALLERY PAGE
+===================================== -->
+  <main id="main-content">
+
+    <!-- ===================================
+       01. GALLERY HERO
+  =================================== -->
+    <section id="gallery-hero" aria-labelledby="gallery-hero-title"
+      class="relative isolate flex min-h-[450px] items-center overflow-hidden bg-deep-ocean text-white sm:min-h-[500px] lg:min-h-[520px]">
+
+      <!-- Background -->
+      <div class="gallery-hero-background absolute inset-0 z-0" aria-hidden="true"></div>
+
+      <!-- Hero Content -->
+      <div class="relative z-10 mx-auto w-full max-w-[1280px] px-6 pb-28 pt-24 sm:px-8 lg:px-12">
+        <div class="max-w-[750px]">
+
+          <p class="mb-5 text-xs font-bold uppercase tracking-[0.2em] text-aqua">
+            Our Gallery
+          </p>
+
+          <h1 id="gallery-hero-title"
+            class="font-heading text-[clamp(2.5rem,5.5vw,4.75rem)] font-bold leading-[1.1] tracking-[-0.05em]">
+            Moments Under
+            <span class="block text-aqua">
+              the Surface.
+            </span>
+          </h1>
+
+          <p class="mt-6 max-w-[570px] text-sm leading-[1.9] text-slate-100 sm:text-base">
+            Mengabadikan momen latihan, eksplorasi,
+            dan kebersamaan yang menjadi bagian dari
+            perjalanan Malang Freediving Community.
+          </p>
+
+          <div class="mt-8 flex items-center gap-3">
+            <span class="h-[2px] w-9 bg-aqua" aria-hidden="true"></span>
+
+            <span class="text-[11px] font-semibold uppercase tracking-[0.15em] text-slate-200">
+              Malang Freediving Community · Est. 2013
+            </span>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- White Wave -->
+      <div class="pointer-events-none absolute inset-x-0 bottom-[-1px] z-20 h-[55px] sm:h-[75px] lg:h-[90px]"
+        aria-hidden="true">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 90" preserveAspectRatio="none" class="h-full w-full">
+          <path d="M0 44 C180 18 340 45 530 58 C730 78 910 40 1100 23 C1250 12 1360 29 1440 39 L1440 90 L0 90Z"
+            fill="#FFFFFF" />
+        </svg>
+      </div>
+
+    </section>
+    <!-- END GALLERY HERO -->
+
+
+    <!-- ===================================
+       02. GALLERY COLLECTION
+  =================================== -->
+    <section id="gallery-collection" aria-labelledby="gallery-title" class="relative bg-white py-16 sm:py-20 lg:py-24">
+
+      <div class="mx-auto max-w-[1280px] px-6 sm:px-8 lg:px-12">
+
+        <!-- Section Heading -->
+        <div class="mb-10 max-w-[680px]">
+
+          <p class="mb-3 text-xs font-bold uppercase tracking-[0.18em] text-ocean">
+            Explore Our Moments
+          </p>
+
+          <h2 id="gallery-title"
+            class="font-heading text-3xl font-bold tracking-[-0.04em] text-ink sm:text-4xl lg:text-[44px]">
+            Our Gallery
+          </h2>
+
+          <p class="mt-4 text-[15px] leading-[1.85] text-muted">
+            Jelajahi berbagai momen yang menggambarkan
+            kegiatan, latihan, eksplorasi, dan
+            kebersamaan komunitas freediving.
+          </p>
+
+        </div>
+
+        <!-- =================================
+           GALLERY CATEGORY FILTER
+      ================================= -->
+        <div role="group" aria-label="Filter kategori galeri" class="mb-5 flex flex-wrap items-center gap-3">
+
+          <button type="button" class="gallery-filter" data-filter="all" aria-pressed="true">
+            All
+          </button>
+
+          <button type="button" class="gallery-filter" data-filter="training" aria-pressed="false">
+            Training
+          </button>
+
+          <button type="button" class="gallery-filter" data-filter="openwater" aria-pressed="false">
+            Open Water
+          </button>
+
+          <button type="button" class="gallery-filter" data-filter="community" aria-pressed="false">
+            Community
+          </button>
+
+          <button type="button" class="gallery-filter" data-filter="event" aria-pressed="false">
+            Event
+          </button>
+
+        </div>
+        <!-- END FILTER -->
+
+        <!-- Gallery Status -->
+        <p id="gallery-status" class="mb-7 text-[13px] text-muted" aria-live="polite">
+          Memuat galeri...
+        </p>
+
+        <!-- =================================
+           MASONRY GALLERY GRID
+      ================================= -->
+        <div id="gallery-grid" class="columns-2 gap-3 sm:columns-3 sm:gap-4 xl:columns-4">
+          <!-- Foto dibuat oleh gallery.js -->
+        </div>
+
+        <!-- Documentation Notice -->
+
+      </div>
+    </section>
+    <!-- END GALLERY COLLECTION -->
+
+
+    <!-- ===================================
+       03. CLOSING CTA
+  =================================== -->
+    <section id="gallery-cta" aria-labelledby="gallery-cta-title"
+      class="gallery-cta-background relative isolate overflow-hidden bg-deep-ocean text-white">
+
+      <div
+        class="relative z-10 mx-auto flex min-h-[320px] max-w-[1280px] flex-col items-center justify-center px-6 py-20 text-center sm:px-8 lg:px-12">
+
+        <h2 id="gallery-cta-title" class="font-heading text-3xl font-bold tracking-[-0.04em] sm:text-4xl">
+          Every Dive Tells a Story
+        </h2>
+
+        <p class="mt-5 max-w-[630px] text-sm leading-[1.85] text-slate-100 sm:text-base">
+          Temukan lebih banyak perjalanan, latihan,
+          dan momen kebersamaan Malang Freediving
+          Community melalui media sosial resmi kami.
+        </p>
+
+        <a href="https://www.instagram.com/freedive.malang/" target="_blank" rel="noopener noreferrer"
+          class="mt-8 inline-flex min-h-12 items-center justify-center gap-3 rounded-full bg-white px-8 py-3 text-sm font-semibold text-ocean shadow-lg transition-colors hover:bg-soft-blue focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white">
+          <!-- Instagram Icon -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="2" y="2" width="20" height="20" rx="5" />
+            <circle cx="12" cy="12" r="4" />
+            <path d="M17.5 6.5h.01" />
+          </svg>
+
+          Ikuti Kami di Instagram
+        </a>
+
+      </div>
+    </section>
+    <!-- END GALLERY CTA -->
+
+  </main>
+  <!-- END GALLERY PAGE -->
+
+
+  <!-- =====================================
+     GALLERY LIGHTBOX
+===================================== -->
+  <dialog id="gallery-dialog" aria-labelledby="gallery-dialog-title" aria-describedby="gallery-dialog-caption"
+    class="gallery-dialog">
+    <div class="bg-[#061B2C] text-white">
+
+      <!-- Lightbox Header -->
+      <div class="flex items-center justify-between gap-4 border-b border-white/10 px-5 py-4 sm:px-7">
+
+        <h2 id="gallery-dialog-title" class="font-heading text-base font-semibold sm:text-lg">
+          Gallery Preview
+        </h2>
+
+        <!-- Close Button -->
+        <button type="button" id="gallery-close" aria-label="Tutup foto"
+          class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-white/10 text-white transition-colors hover:bg-white/20">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            aria-hidden="true">
+            <path d="M18 6 6 18M6 6l12 12" />
+          </svg>
+        </button>
+
+      </div>
+
+      <!-- Lightbox Image -->
+      <div class="relative flex min-h-[250px] items-center justify-center bg-[#031322] p-4 sm:p-7">
+
+        <img id="gallery-dialog-image" src="/images/hero-freedive.jpg" alt="Pratinjau foto galeri"
+          class="max-h-[65dvh] w-full object-contain" />
+
+        <!-- Previous -->
+        <button type="button" id="gallery-prev" aria-label="Foto sebelumnya"
+          class="absolute left-2 top-1/2 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full bg-[#061B2C]/80 text-xl text-white backdrop-blur-sm hover:bg-ocean sm:left-5">
+          &#8592;
+        </button>
+
+        <!-- Next -->
+        <button type="button" id="gallery-next" aria-label="Foto selanjutnya"
+          class="absolute right-2 top-1/2 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full bg-[#061B2C]/80 text-xl text-white backdrop-blur-sm hover:bg-ocean sm:right-5">
+          &#8594;
+        </button>
+
+      </div>
+
+      <!-- Caption -->
+      <div class="px-5 py-4 sm:px-7">
+        <p id="gallery-dialog-caption" class="text-sm leading-7 text-slate-300">
+          Foto ilustrasi sementara.
+        </p>
+      </div>
+
+    </div>
+  </dialog>
+  <!-- END LIGHTBOX -->
+
+  <script type="module" src="/src/js/main.js"></script>
+  <!-- Gallery Filter & Lightbox -->
+  <script type="module" src="/src/js/gallery.js"></script>
+</body>
+
 </html>

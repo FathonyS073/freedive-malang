@@ -929,3 +929,228 @@ html {
   }
 
 }
+
+
+/* =====================================
+   C.14 - GALLERY PAGE
+===================================== */
+
+/* =====================================
+   1. GALLERY HERO
+===================================== */
+
+.gallery-hero-background {
+  background-color: #063653;
+
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(1, 20, 38, 0.92) 0%,
+      rgba(2, 32, 56, 0.82) 38%,
+      rgba(2, 44, 71, 0.38) 75%,
+      rgba(1, 25, 45, 0.45) 100%
+    ),
+    url("/images/hero-freedive.jpg");
+
+  background-size: cover;
+  background-position: center, 60% center;
+  background-repeat: no-repeat;
+}
+
+
+/* =====================================
+   2. FILTER BUTTONS
+===================================== */
+
+.gallery-filter {
+  display: inline-flex;
+  min-height: 42px;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid #d9eaf5;
+  border-radius: 9999px;
+
+  padding: 10px 22px;
+
+  background-color: #edf7fd;
+  color: #07579b;
+
+  font-family: "Inter", sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+
+  cursor: pointer;
+  transition:
+    background-color 200ms ease,
+    color 200ms ease,
+    border-color 200ms ease;
+}
+
+.gallery-filter:hover {
+  background-color: #d7effc;
+}
+
+.gallery-filter[aria-pressed="true"] {
+  background-color: #07579b;
+  border-color: #07579b;
+  color: #ffffff;
+}
+
+.gallery-filter:focus-visible {
+  outline: 2px solid #05b9ef;
+  outline-offset: 3px;
+}
+
+
+/* =====================================
+   3. MASONRY GALLERY
+===================================== */
+
+.gallery-card {
+  display: block;
+  width: 100%;
+  break-inside: avoid;
+  -webkit-column-break-inside: avoid;
+  cursor: zoom-in;
+  text-align: left;
+}
+
+/* Ensure filtered items disappear */
+.gallery-card[hidden] {
+  display: none !important;
+}
+
+/* Different image shapes */
+.gallery-media--portrait {
+  aspect-ratio: 3 / 4;
+}
+
+.gallery-media--landscape {
+  aspect-ratio: 4 / 3;
+}
+
+.gallery-media--square {
+  aspect-ratio: 1 / 1;
+}
+
+/* Image inside gallery cards */
+.gallery-card img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  transition: transform 450ms ease;
+}
+
+.gallery-card:hover img {
+  transform: scale(1.06);
+}
+
+.gallery-card:focus-visible {
+  outline: 3px solid #05b9ef;
+  outline-offset: 4px;
+}
+
+
+/* =====================================
+   4. LIGHTBOX
+===================================== */
+
+.gallery-dialog {
+  position: fixed;
+  inset: 0;
+
+  width: min(92vw, 1000px);
+  max-width: 1000px;
+  max-height: 92dvh;
+
+  margin: auto;
+  padding: 0;
+
+  overflow: auto;
+
+  border: 0;
+  border-radius: 20px;
+
+  background-color: #061b2c;
+  color: #ffffff;
+
+  box-shadow: 0 25px 80px rgba(0, 0, 0, 0.5);
+}
+
+.gallery-dialog::backdrop {
+  background-color: rgba(1, 10, 22, 0.88);
+  backdrop-filter: blur(6px);
+}
+
+
+/* =====================================
+   5. CLOSING CTA
+===================================== */
+
+.gallery-cta-background {
+  background-color: #062b48;
+
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(1, 25, 48, 0.86),
+      rgba(2, 55, 89, 0.72),
+      rgba(1, 26, 48, 0.86)
+    ),
+    url("/images/cta.webp");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+/* =====================================
+   6. RESPONSIVE
+===================================== */
+
+@media (max-width: 639px) {
+  .gallery-hero-background {
+    background-image:
+      linear-gradient(
+        180deg,
+        rgba(1, 20, 38, 0.90),
+        rgba(2, 36, 62, 0.76),
+        rgba(1, 22, 43, 0.92)
+      ),
+      url("/images/hero-freedive.jpg");
+
+    background-position: center, 65% center;
+  }
+
+  .gallery-filter {
+    padding: 9px 16px;
+    font-size: 12px;
+    min-height: 40px;
+  }
+
+  .gallery-dialog {
+    width: 96vw;
+    border-radius: 14px;
+  }
+}
+
+
+/* =====================================
+   7. ACCESSIBILITY
+===================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .gallery-card img,
+  .gallery-filter {
+    transition: none;
+  }
+
+  .gallery-card:hover img {
+    transform: none;
+  }
+}
+
