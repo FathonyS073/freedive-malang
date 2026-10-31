@@ -950,7 +950,7 @@ html {
       rgba(2, 44, 71, 0.38) 75%,
       rgba(1, 25, 45, 0.45) 100%
     ),
-    url("/images/hero-freedive.jpg");
+    url("/images/gallery.jpg");
 
   background-size: cover;
   background-position: center, 60% center;
@@ -1153,4 +1153,254 @@ html {
     transform: none;
   }
 }
+
+
+/* =====================================
+   C.15 - CONTACT PAGE
+===================================== */
+
+/* =====================================
+   1. CONTACT HERO BACKGROUND
+===================================== */
+
+.contact-hero-background {
+  background-color: #062b48;
+
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(1, 20, 38, 0.94) 0%,
+      rgba(2, 32, 56, 0.82) 40%,
+      rgba(2, 44, 71, 0.42) 75%,
+      rgba(1, 25, 45, 0.52) 100%
+    ),
+    url("/images/activities/environment-03.jpg");
+
+  background-size:cover;
+  background-position: center, center 75%;
+  background-repeat: no-repeat;
+}
+
+
+/* =====================================
+   2. CONTACT CARDS
+===================================== */
+
+.contact-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  min-width: 0;
+  padding: 26px;
+
+  border: 1px solid #e7eff5;
+  border-radius: 20px;
+
+  background-color: #ffffff;
+
+  box-shadow:
+    0 8px 30px rgba(6, 43, 72, 0.06);
+
+  transition:
+    transform 300ms ease,
+    box-shadow 300ms ease,
+    border-color 300ms ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-5px);
+
+  border-color: #cee8f8;
+
+  box-shadow:
+    0 16px 40px rgba(6, 43, 72, 0.12);
+}
+
+/* Contact Icon Circle */
+.contact-icon {
+  display: flex;
+  width: 60px;
+  height: 60px;
+
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  background-color: #ddf3fc;
+  color: #07579b;
+}
+
+
+/* =====================================
+   3. CONTACT FEATURE IMAGE
+===================================== */
+
+.contact-feature-image {
+  object-position: 60% center;
+  transition: transform 700ms ease;
+}
+
+.contact-feature-image:hover {
+  transform: scale(1.035);
+}
+
+
+/* =====================================
+   4. FAQ ACCORDION
+===================================== */
+
+.contact-faq {
+  overflow: hidden;
+
+  border: 1px solid #e2ebf3;
+  border-radius: 16px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 5px 20px rgba(6, 43, 72, 0.04);
+}
+
+/* FAQ Question */
+.contact-faq-question {
+  display: flex;
+  min-height: 70px;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  padding: 20px 24px;
+
+  color: #122840;
+
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.6;
+
+  cursor: pointer;
+  list-style: none;
+}
+
+.contact-faq-question::-webkit-details-marker {
+  display: none;
+}
+
+.contact-faq-question:hover {
+  color: #07579b;
+  background-color: #fbfdff;
+}
+
+.contact-faq-question:focus-visible {
+  outline: 2px solid #05b9ef;
+  outline-offset: -4px;
+}
+
+/* Opened FAQ */
+.contact-faq[open] {
+  border-color: #c5e5f7;
+}
+
+/* FAQ Answer */
+.contact-faq-answer {
+  padding: 0 24px 24px;
+
+  color: #64748b;
+  font-family: "Inter", sans-serif;
+
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+
+/* =====================================
+   5. CLOSING CTA BACKGROUND
+===================================== */
+
+.contact-cta-background {
+  background-color: #062b48;
+
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(1, 25, 48, 0.88),
+      rgba(2, 55, 89, 0.70),
+      rgba(1, 26, 48, 0.88)
+    ),
+    url("/images/cta.webp");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+/* =====================================
+   6. MOBILE RESPONSIVE
+===================================== */
+
+@media (max-width: 639px) {
+
+  .contact-hero-background {
+    background-image:
+      linear-gradient(
+        180deg,
+        rgba(1, 20, 38, 0.92),
+        rgba(2, 36, 62, 0.82),
+        rgba(1, 22, 43, 0.94)
+      ),
+      url("/images/hero-freedive.jpg");
+
+    background-position: center, 65% center;
+  }
+
+  .contact-card {
+    padding: 22px;
+  }
+
+  .contact-feature-image {
+    object-position: 60% center;
+  }
+
+  .contact-faq-question {
+    padding: 18px 20px;
+    font-size: 14px;
+  }
+
+  .contact-faq-answer {
+    padding: 0 20px 22px;
+    font-size: 13px;
+  }
+
+  .contact-cta-background {
+    background-position: 60% center;
+  }
+}
+
+
+/* =====================================
+   7. REDUCED MOTION
+===================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .contact-card,
+  .contact-feature-image,
+  .contact-faq-question svg {
+    transition: none;
+  }
+
+  .contact-card:hover,
+  .contact-feature-image:hover {
+    transform: none;
+  }
+
+}
+
 
